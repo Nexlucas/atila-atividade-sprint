@@ -6,9 +6,12 @@ export default function Contador() {
 
     const [ contador, setContador ] = useState(0);
     const [ passo, setPasso ] = useState(1);
+    const [ ultimolote, setUltimolote ] = useState(0);
+    const [ ultimovalor, setUltimovalor ] = useState(0);
 
     function incrementar() {
         setContador(valorAnterior => valorAnterior + passo);
+        setUltimovalor(valorAnterior => valorAnterior + passo)
     }
 
     function decrementar() {
@@ -17,6 +20,8 @@ export default function Contador() {
 
     function resetar() {
         setContador(0);
+        setUltimolote(ultimovalor);
+        setUltimovalor(0);
     }
 
     return (
@@ -36,36 +41,23 @@ export default function Contador() {
                     Passo do incremento:
                 </label>
 
-                <input
-                    id="passo-input"
-                    type="number"
-                    min="1"
-                    max="10"
-                    value={passo}
-                    onChange={(e) => setPasso(Number(e.target.value) || 1)}
-                />
+                <input id="passo-input" type="number" min="1" max="50" value={passo} onChange={(e) => setPasso(Number(e.target.value) || 1)}/>
+
             </div>
 
             <div className="botoes-grupo">
 
-                <button className="btn btn-decrementar" onClick={decrementar}>
-                    - {passo}
-                </button>
+                <button className="btn btn-decrementar" onClick={decrementar}> - {passo}</button>
 
-                <button className="btn btn-resetar" onClick={resetar}>
-                    Zerar
-                </button>
+                <button className="btn btn-resetar" onClick={resetar}> Zerar </button>
 
-                <button className="btn btn-incrementar" onClick={incrementar}>
-                    + {passo}
-                </button>
+                <button className="btn btn-incrementar" onClick={incrementar}> + {passo}</button>
 
             </div>
 
             <div className="explicacao-box">
-                <code>const [contador, setContador] = useState(0)</code>
                 <p>
-                    O estado armazena um valor numérico que é re-renderizado a cada alteração.
+                    O ultimo lote regristrado foi de {ultimolote}.
                 </p>
             </div>
 
