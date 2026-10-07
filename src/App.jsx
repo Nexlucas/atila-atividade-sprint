@@ -5,9 +5,9 @@ export default function App(){
   return(
     <div className='app-container'>
       <header className='app-header'>
-        <h1>Explorador de Estados do React</h1>
-        <p>Aprenda ma prática os 4 principais padrões de uso do hook
-          <span>useState</span>
+        <h1>Painel de Controle de Lotes Industriais</h1>
+        <p> 
+          <span className="badge"> Lotes</span>
         </p>
       </header>
       <main className='grid-exemplos'>
@@ -15,7 +15,7 @@ export default function App(){
       </main>
       <footer className='app-footer'>
 
-        <p>Demonstrando o uso do React Hook useState</p>
+        <p></p>
         
       </footer>
     </div>

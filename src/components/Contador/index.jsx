@@ -4,24 +4,34 @@ import './estilo.css';
 
 export default function Contador() {
 
-    const [ contador, setContador ] = useState(0);
+    const [ contador, setContador ] = useState(1);
     const [ passo, setPasso ] = useState(1);
     const [ ultimolote, setUltimolote ] = useState(0);
-    const [ ultimovalor, setUltimovalor ] = useState(0);
-
     function incrementar() {
-        setContador(valorAnterior => valorAnterior + passo);
-        setUltimovalor(valorAnterior => valorAnterior + passo)
+        if(contador <= 49 && passo <= 50){
+            setContador(valorAnterior => valorAnterior + passo);
+            setUltimovalor(valorAnterior => valorAnterior + passo);
+        }else{
+
+        }
     }
 
     function decrementar() {
-        setContador(valorAnterior => valorAnterior - passo);
+        if(contador >= 2 && passo >= 1){
+            setContador(valorAnterior => valorAnterior - passo);
+        }else{
+            
+        }
     }
 
     function resetar() {
-        setContador(0);
-        setUltimolote(ultimovalor);
-        setUltimovalor(0);
+        if(contador < 51 && contador > 0){
+            setUltimolote(contador);
+            setContador(1);
+
+        }else{
+
+        }
     }
 
     return (
@@ -29,7 +39,7 @@ export default function Contador() {
 
             <div className="card-header">
                 <span className="badge">1. Estado Numérico</span>
-                <h3>Contador com Passo Customizado</h3>
+                <h3>Contador de lotes</h3>
             </div>
 
             <div className="contador-display">
