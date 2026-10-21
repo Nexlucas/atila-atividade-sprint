@@ -1,21 +1,60 @@
 .contador-display {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 15px 0;
 }
 
+.alerta-null{
+    display: none;
+}
 
+.alerta-a{
+    color: #a47403;
+    background: #fffff0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #fff8ba;
+}
+.alerta-b{
+    color: #a40303;
+    background: #fff0f0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #ffbaba;
+}
 
-.numero-contador {
+.contador-normal {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #0070f3;
+    color: #034ea4;
     background: #f0f7ff;
     padding: 10px 30px;
     border-radius: 10px;
     border: 1px solid #bae0ff;
 }
+
+.contador-alerta {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #a48903;
+    background: #fffbf0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #fff7ba;
+}
+
+.contador-limite {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #a40303;
+    background: #fff0f0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #ffbaba;
+}
+
 
 .passo-container {
     display: flex;

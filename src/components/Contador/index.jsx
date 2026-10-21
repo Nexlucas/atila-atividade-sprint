@@ -7,6 +7,7 @@ export default function Contador() {
     const [ contador, setContador ] = useState(1);
     const [ passo, setPasso ] = useState(1);
     const [ ultimolote, setUltimolote ] = useState(0);
+    const limite = 50;
     function incrementar() {
         if(contador <= 49 && passo <= 50){
             setContador(valorAnterior => valorAnterior + passo);
@@ -42,7 +43,10 @@ export default function Contador() {
             </div>
 
             <div className="contador-display">
-                <span className="numero-contador">{contador}</span>
+                <span className={contador >= limite ? "contador-limite" : contador >= limite - 2 ? "contador-alerta" : "contador-normal"}>{contador}</span>
+                <p className={contador >= limite - 2 ? "alerta-a" : "alerta-null"}>⚠️ Limite máximo atingido!</p>
+                <p className={contador >= limite && contador >= limite - 2 ? "alerta-b" : "alerta-null"}>⚡ Atenção: Você está perto do limite!</p>
+
             </div>
 
             <div className="passo-container">
