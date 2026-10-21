@@ -35,7 +35,7 @@ body {
 
 .app-header p {
   margin: 0;
-  color: #64748b;
+  color: #0061e8;
   font-size: 16px;
 }
 
@@ -54,7 +54,7 @@ body {
 }
 
 .card-exemplo {
-  background-color: white;
+  background-color: rgb(223, 223, 223);
   border-radius: 14px;
   padding: 24px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);

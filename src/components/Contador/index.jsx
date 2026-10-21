@@ -38,7 +38,6 @@ export default function Contador() {
         <div className="card-exemplo">
 
             <div className="card-header">
-                <span className="badge">Contador</span>
                 <h3>Contador de Paletes</h3>
             </div>
 
