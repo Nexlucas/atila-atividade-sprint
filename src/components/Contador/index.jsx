@@ -43,10 +43,10 @@ export default function Contador() {
             </div>
 
             <div className="contador-display">
-                <span className={contador >= limite ? "contador-limite" : contador >= limite - 2 ? "contador-alerta" : "contador-normal"}>{contador}</span>
-                <p className={contador >= limite - 2 ? "alerta-a" : "alerta-null"}>⚠️ Limite máximo atingido!</p>
-                <p className={contador >= limite && contador >= limite - 2 ? "alerta-b" : "alerta-null"}>⚡ Atenção: Você está perto do limite!</p>
-
+                <span className={contador >= limite && contador < 51 ? "contador-limite" : contador >= limite - 2 && contador < limite ? "contador-alerta" : contador >= 51 ? "contador-aLimite" : "contador-normal"}>{contador}</span>
+                <p className={contador >= limite - 2 && contador < limite ? "alerta-a" :  "alerta-null"}>⚡ Atenção: Você está perto do limite!</p>
+                <p className={contador >= limite && contador < 51 ? "alerta-b" : "alerta-null"}>⚠️ Limite máximo atingido!</p>
+                <p className={contador >= 51 ? "alerta-c" : "alerta-null"}>⚠️ VOCÊ EXCEDEU O LIMITE DE 50!</p>
             </div>
 
             <div className="passo-container">

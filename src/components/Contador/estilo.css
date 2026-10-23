@@ -25,6 +25,16 @@
     border: 1px solid #ffbaba;
 }
 
+
+.alerta-c{
+    color: #151313;
+    background: #a9a9a9;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #525151;
+}
+
+
 .contador-normal {
     font-size: 2.5rem;
     font-weight: 700;
@@ -54,6 +64,17 @@
     border-radius: 10px;
     border: 1px solid #ffbaba;
 }
+
+.contador-aLimite {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4a4a4a;
+    background: #bcbcbc;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 1px solid #8f8f8f;
+}
+
 
 
 .passo-container {
